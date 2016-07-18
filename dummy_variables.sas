@@ -33,3 +33,9 @@ run;
 %mend;
 
 %dummy(make, sashelp.cars, 8)
+
+proc sql;
+	create table new_cars as
+	select *, &case_statement.
+	from sashelp.cars;
+quit;
